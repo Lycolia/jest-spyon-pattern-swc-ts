@@ -2,11 +2,21 @@
 
 - An example of a Jest spyOn pattern
   - named function
-    - `export foo = () => {}`
+    - ```ts
+      export foo = () => {} // <- spyOn this function
+      ```
   - inside namespace
-    - `export namespace Foo { export const foo = () => {} }`
+    - ```ts
+      export namespace Foo {
+        export const foo = () => {} // <- spyOn this function
+      }
+      ```
   - inside named module(object)
-    - `export const Foo { foo: () => {} }`
+    - ```ts
+      export const Foo {
+        foo: () => {} // <- spyOn this function
+      }
+      ```
 
 ## Required
 
