@@ -1,7 +1,7 @@
-import * as child from 'src/child';
-import { parent } from 'src/parent';
+import * as child from 'src/named-export/child';
+import { parent } from 'src/named-export/parent';
 
-jest.mock('src/child');
+jest.mock('src/named-export/child');
 
 describe('function', () => {
   it('called by child function', () => {
