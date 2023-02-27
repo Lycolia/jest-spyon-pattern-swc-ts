@@ -1,20 +1,25 @@
-# jest.spyOn pattern example for SWC + TypeScript 
+# jest.spyOn pattern example for SWC + TypeScript
 
 - An example of a Jest spyOn pattern
-  - named function
+  - default export
     - ```ts
-      export foo = () => {} // <- spyOn this function
+      foo = () => {}; // <- spyOn this function
+      export default foo;
+      ```
+  - named export
+    - ```ts
+      export foo = () => {}; // <- spyOn this function
       ```
   - inside namespace
     - ```ts
       export namespace Foo {
-        export const foo = () => {} // <- spyOn this function
+        export const foo = () => {}; // <- spyOn this function
       }
       ```
   - inside named module(object)
     - ```ts
       export const Foo {
-        foo: () => {} // <- spyOn this function
+        foo: () => {}; // <- spyOn this function
       }
       ```
 
